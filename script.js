@@ -20,12 +20,13 @@ function kusama(event) {
   const newDiv = document.createElement("div");
   newDiv.setAttribute("id",`circle${counter}`);
   document.body.appendChild(newDiv);
+  const circleSize = Math.random() * 300;
   document.getElementById(`circle${counter}`).style.position = "absolute";
-  document.getElementById(`circle${counter}`).style.top = `${event.clientY - 50}px`;
-  document.getElementById(`circle${counter}`).style.left = `${event.clientX - 50}px`;
+  document.getElementById(`circle${counter}`).style.top = `${event.clientY - (circleSize / 2)}px`;
+  document.getElementById(`circle${counter}`).style.left = `${event.clientX - (circleSize / 2)}px`;
   document.getElementById(`circle${counter}`).style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
-  document.getElementById(`circle${counter}`).style.width = "100px";
-  document.getElementById(`circle${counter}`).style.height = "100px";
+  document.getElementById(`circle${counter}`).style.width = `${circleSize}px`;
+  document.getElementById(`circle${counter}`).style.height = `${circleSize}px`;
   document.getElementById(`circle${counter}`).style.borderRadius = "50%";
   document.getElementById(`circle${counter}`).style.zIndex = "10";
   counter += 1; 
